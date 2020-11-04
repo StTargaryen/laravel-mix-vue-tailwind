@@ -15,7 +15,7 @@ export default {
 </script>
 <style>
 #app {
-  max-width: 600px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   justify-content: center;

@@ -1,40 +1,55 @@
 <template>
-  <div class="mt-10 max-w-sm rounded overflow-hidden shadow-lg">
-    <div class="px-6 py-4">
-      <div class="">The Default Card</div>
-      <p class="card__text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-      </p>
-    </div>
-    <div class="card__footer">
-      <span class="card__tag">#laravel-mix</span>
-      <span class="card__tag">#tailwind</span>
-      <span class="card__tag">#vue</span>
-    </div>
+  <div class="card-list">
+    <CardItem v-for="(card, index) in cards" :key="index" :cardInfo="card" />
   </div>
 </template>
 
 <script>
-  export default {
-    
-  }
+import CardItem from "./CardsItem";
+export default {
+  name: "card-list",
+  data() {
+    return {
+      cards: [
+        {
+          title: "The Default Card",
+          id: 1,
+          text:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptatem id molestiae sapiente voluptate non laudantium natus nam iste incidunt?",
+          tags: ["laravel-mix"],
+        },
+        {
+          title: "The Default Card",
+          id: 2,
+          text:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptatem id molestiae sapiente voluptate non laudantium natus nam iste incidunt?",
+          tags: ["laravel-mix","vue"],
+        },
+        {
+          title: "The Default Card",
+          id: 3,
+          text:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptatem id molestiae sapiente voluptate non laudantium natus nam iste incidunt?",
+          tags: ["laravel-mix", "tailwind", "vue"],
+        },
+        {
+          title: "The Default Card",
+          id: 4,
+          text:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptatem id molestiae sapiente voluptate non laudantium natus nam iste incidunt?",
+          tags: [],
+        },
+      ],
+    };
+  },
+  components: {
+    CardItem,
+  },
+};
 </script>
 
 <style lang="scss">
-
-.card__title {
-  @apply font-bold text-xl mb-2;
-};
-
-.card__text {
-  @apply text-gray-700 text-base;
-};
-
-.card__tag {
-  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2;
-};
-
-.card__footer {
-  @apply px-6 pt-4 pb-2;
-};
+.card-list {
+  display: flex;
+}
 </style>

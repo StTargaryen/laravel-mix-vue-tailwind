@@ -28,7 +28,17 @@
 <style lang="scss" scoped>
 
 .card-item {
-  @apply m-10 max-w-sm rounded overflow-hidden shadow-lg;
+  margin: 0px 5px;
+  transition: all .2s ease;
+  width: 33.33%;
+  cursor: pointer;
+  @apply my-10 max-w-sm sm:sm:max-w-md rounded overflow-hidden shadow;
+
+
+  &:hover {
+    transition: all .2s ease;
+    @apply shadow-2xl;
+  }
 
   &__content {
     @apply px-6 py-4;

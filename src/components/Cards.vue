@@ -39,6 +39,20 @@ export default {
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptatem id molestiae sapiente voluptate non laudantium natus nam iste incidunt?",
           tags: [],
         },
+        {
+          title: "The Default Card",
+          id: 3,
+          text:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptatem id molestiae sapiente voluptate non laudantium natus nam iste incidunt?",
+          tags: ["laravel-mix", "tailwind", "vue"],
+        },
+        {
+          title: "The Default Card",
+          id: 4,
+          text:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptatem id molestiae sapiente voluptate non laudantium natus nam iste incidunt?",
+          tags: [],
+        },
       ],
     };
   },
@@ -51,5 +65,7 @@ export default {
 <style lang="scss">
 .card-list {
   display: flex;
+  flex-wrap: wrap;
+
 }
 </style>

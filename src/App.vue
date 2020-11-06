@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Cards/>
+    <main-wrapper/>
   </div>
 </template>
 
@@ -9,7 +9,6 @@ import Cards from './components/Cards'
 export default {
   name: 'App',
   components: {
-    Cards
   }
 };
 </script>

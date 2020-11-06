@@ -25,6 +25,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "tailwindcss": "^1.9.6",
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.9"
   }
 }
